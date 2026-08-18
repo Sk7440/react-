@@ -1,0 +1,47 @@
+
+
+.accordion-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.accordion-item[open] {
+  border-color: #6366f1;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
+}
+
+.accordion-header {
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  background: #f8fafc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-header:hover {
+  background: #f1f5f9;
+}
+
+/* Hide default marker for cross-browser consistency */
+.accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-content {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
