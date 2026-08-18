@@ -55,3 +55,6 @@ body {
 .add-to-cart-btn:hover {
     background-color: #0056b3;
 }
+.active{
+    background-color: red;
+}
