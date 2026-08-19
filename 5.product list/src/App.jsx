@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Product from "./Productcart";
+import Navbar from "./Navbar"
+import InputHandling from "./InputHandling";
 
 function App() {
   const data = [
@@ -33,15 +35,18 @@ function saveindex(idx) {
 
   return (
     <>
-      {data.map((ele, idx) => {
+        <Navbar/>
+
+      {/* {data.map((ele, idx) => {
         return <>
-        <div onClick={()=>{saveindex(idx)}}>
+        <div className="parent" onClick={()=>{saveindex(idx)}}>
 
         <Product info ={ele} indexS={index} index ={idx} />
         </div>
 
         </>;
-      })}
+      })} */}
+      <InputHandling/>
     </>
   );
 }
