@@ -25,6 +25,18 @@
 }
 .cart{
     font-size: 50px;
+    position: relative;
+  }
+  .pop{
+    position: absolute;
+    top: -10px;
+    background: red;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 50%;
+    left: 30px;
+    font-size: 16px !important;
+  
 }
 .parent:hover {
   transform: translateY(-8px);

@@ -1,11 +1,16 @@
 import { CiShoppingCart } from "react-icons/ci";
 
-function Navbar() {
+function Navbar(countS) {
   return (
     <>
       <nav className="main-navbar">
         <h1>This is Navbar</h1>
-        <CiShoppingCart className="cart" />
+        <div className="cart">
+
+        <CiShoppingCart  />
+        <div class="pop">
+          {countS}</div>
+        </div>
       </nav>
     </>
   );

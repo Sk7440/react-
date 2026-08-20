@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GrAed } from "react-icons/gr";
 
-function Product({ info, index, indexS }) {
+function Product({ info }) {
 
   const [isLiked, setIsLiked] = useState(false)
 
@@ -18,7 +18,6 @@ function Product({ info, index, indexS }) {
 
         {isLiked ? <GrAed className="active" /> : <GrAed />}
         </button>
-        <button class="add-to-cart-btn">Add to Cart</button>
 
 
         </div>

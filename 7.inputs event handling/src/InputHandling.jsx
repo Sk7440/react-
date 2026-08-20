@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function InputHandling() {
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
   const [data, setData] = useState({
     city: "",
     country: "",

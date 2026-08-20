@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Product from "./Productcart";
-import Navbar from "./Navbar"
-import InputHandling from "./InputHandling";
+import Navbar from "./Navbar";
 
 function App() {
   const data = [
@@ -23,30 +22,28 @@ function App() {
       name: "koenigsegg",
       paragraph:
         "This is a short and simple paragraph describing the amazing features of this product.",
-
     },
   ];
-const {index,setindex} =useState(null)
-
-function saveindex(idx) {
-  setindex(idx)
-  
-}
-
+  const { count, setcount } = useState(0);
+  function increment() {
+    setcount + 1;
+  }
   return (
     <>
-        <Navbar/>
+      <Navbar countS={count} />
 
-      {/* {data.map((ele, idx) => {
-        return <>
-        <div className="parent" onClick={()=>{saveindex(idx)}}>
-
-        <Product info ={ele} indexS={index} index ={idx} />
-        </div>
-
-        </>;
-      })} */}
-      <InputHandling/>
+      {data.map((ele, idx) => {
+        return (
+          <>
+            <div className="parent">
+              <Product info={ele} index={idx} />
+              <button class="add-to-cart-btn" onClick={() => increment()}>
+                Add to Cart
+              </button>
+            </div>
+          </>
+        );
+      })}
     </>
   );
 }
