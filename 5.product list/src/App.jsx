@@ -24,9 +24,13 @@ function App() {
         "This is a short and simple paragraph describing the amazing features of this product.",
     },
   ];
-  const { count, setcount } = useState(0);
+  const [count, setcount] = useState(0);
+  const [index, setIndex] = useState(null);
+  function ind(idx) {
+    setIndex(idx);
+  }
   function increment() {
-    setcount + 1;
+    setcount(count + 1);
   }
   return (
     <>
@@ -35,10 +39,13 @@ function App() {
       {data.map((ele, idx) => {
         return (
           <>
-            <div className="parent">
+            <div key={idx} className="parent">
               <Product info={ele} index={idx} />
-              <button class="add-to-cart-btn" onClick={() => increment()}>
-                Add to Cart
+              <button
+                className="add-to-cart-btn"
+                onClick={() => increment(ind(idx))}
+              >
+                {index == idx ? "Added to cart" : "Add to Cart"}
               </button>
             </div>
           </>
