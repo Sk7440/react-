@@ -1,25 +1,17 @@
-import './App.css'
+
+import AccordionUsage from "./Accordion";
+import "./App.css";
+import BoxBasic from "./Box";
+import BoxSx from "./Colourbox";
 
 function App() {
-
   return (
     <>
-      <Box sx={{
-        backgroundColor: {xs: 'red', sm: 'blue', md: 'green'},
-        display: 'flex',
-        flexDirection: {xs: 'column', md: 'row'}
-      }}>
-
-      </Box>
-
-      <Typography variant={'body'}>
-        sss
-      </Typography>
-
-
-      
+     <BoxBasic/>
+     <BoxSx/>
+     <AccordionUsage/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
