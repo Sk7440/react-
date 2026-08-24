@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css"; // Custom styling file
 
 function FeaturedProducts() {
   const products = [

@@ -24,7 +24,6 @@
 .image img {
   height: 500px;
   object-fit: contain;
-  
 }
 .zay-card h1 {
   color: #2ecc71;
@@ -141,7 +140,10 @@
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .featured-title {
@@ -225,4 +227,435 @@
   color: #64748b;
   font-size: 0.875rem;
   line-height: 1.625;
+}
+.zay-footer {
+  background-color: #2e353f;
+  color: #d7d8dc; /* Main light text color */
+  padding-top: 50px;
+}
+
+/* Container to center and constrain content */
+.zay-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Flexbox for the three main columns */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.footer-column {
+  flex: 1 1 25%; /* Columns take equal width, 25% min */
+  min-width: 250px; /* Essential to keep columns looking like columns on resize */
+  margin-bottom: 30px;
+}
+
+/* Styling for "Zay Shop" column with green heading and horizontal line */
+.footer-column.shop-info h1 {
+  color: #59ab6e; /* The specific green color */
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.footer-column.shop-info hr {
+  border: 0;
+  border-top: 1px solid #4a4a4a; /* Light gray line below green heading */
+  margin: 0 0 15px 0;
+  max-width: 250px;
+}
+
+/* Styling for other column headings (Products, Further Info) */
+.footer-column h1 {
+  color: #d7d8dc; /* Off-white color */
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* Common UL/LI styling for all lists */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  font-size: 1rem;
+  line-height: 2.2; /* Spacing between items */
+}
+
+/* Specific styles for the Contact links with icons */
+.contact-link {
+  text-decoration: none;
+  color: #d7d8dc;
+  display: flex;
+  align-items: center;
+}
+
+.contact-link i {
+  margin-right: 12px;
+  color: #cfd1d6; /* Sightly different icon color */
+  width: 16px; /* Essential: give icons a fixed width to align text perfectly */
+  text-align: center;
+}
+
+/* Specific styles for regular column links with no icons (Products, Further Info) */
+.column-link {
+  text-decoration: none;
+  color: #d7d8dc;
+}
+
+/* Styling for the lower row (social media and subscribe) */
+.lower-footer {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-top: 1px solid #4a4a4a; /* Thin separator line */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Social icons at bottom-left */
+.lower-footer .social-icons ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lower-footer .social-icons li {
+  margin-right: 15px;
+}
+
+.lower-footer .social-icons li a {
+  color: #d7d8dc;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Subscribe box at bottom-right */
+.lower-footer .subscribe-box {
+  display: flex;
+  border: 1px solid #4a4a4a; /* Light border around the whole input group */
+  border-radius: 4px; /* Rounded corners */
+  overflow: hidden;
+}
+
+.subscribe-box input[type="email"] {
+  background-color: transparent;
+  border: none;
+  padding: 8px 15px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.subscribe-box input[type="email"]::placeholder {
+  color: #838e9a; /* Specific light gray for placeholder */
+}
+
+.subscribe-box button[type="submit"] {
+  background-color: #59ab6e; /* Subscribe button green color */
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Copyright bar with distinct background color */
+.copyright-bar {
+  background-color: #232a32; /* Distinct, darker background for copyright */
+  color: #8c9096; /* Copyright text color */
+  padding: 15px 0;
+  margin-top: 20px; /* Margin to separate from above content */
+}
+
+.copyright-bar p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.copyright-bar a {
+  color: #59ab6e; /* Design link green color */
+  text-decoration: none;
+}
+/* Container styling for the About Us section */
+.about-us-container {
+  background-color: #59ab6e; /* The specific green background color */
+  color: #ffffff; /* White text color */
+  padding: 60px 0; /* Vertical padding */
+  font-family: "Roboto", sans-serif; /* Example font - use yours */
+  display: flex;
+  align-items: center; /* Vertically center content */
+}
+
+/* Inner row to hold and align text and image */
+.about-us-row {
+  max-width: 1140px; /* Adjust based on your container width */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Space out text and image */
+  align-items: center; /* Vertically center content */
+  padding: 0 15px; /* Side padding */
+}
+
+/* Left side text styling */
+.about-us-text {
+  flex: 0 0 50%; /* Text takes up 50% width */
+  max-width: 50%;
+}
+
+.about-us-text h1 {
+  font-size: 48px; /* Adjust font size */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-us-text p {
+  font-size: 18px; /* Adjust font size */
+  line-height: 1.6;
+}
+
+/* Right side image styling */
+.about-us-image {
+  flex: 0 0 50%; /* Image takes up 50% width */
+  max-width: 50%;
+  text-align: center; /* Center image within its column */
+}
+
+.about-us-image img {
+  max-width: 100%; /* Make image responsive */
+  height: auto;
+}
+.services-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+.services-subtitle {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto 50px auto;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #ffffff;
+  width: 220px;
+  height: 200px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  /* Soft card shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-card i {
+  font-size: 3.2rem;
+  color: #59ab6e; /* Green icon color */
+  margin-bottom: 25px;
+}
+
+.service-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #212529;
+}
+.card {
+  width: 260px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 280px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-title {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.card-rating {
+  color: #e2e220; /* Active yellow stars */
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.card-price {
+  display: inline-block;
+  background-color: #337ab7;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+/*navbar */
+.me-auto {
+  padding: 20px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 10%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar{
+  z-index: 99;
+}
+/* General Font and Color Settings */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #212529;
+  margin: 0;
+}
+
+/* Contact Header */
+.contact-header {
+  background-color: #e9ecef;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.contact-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #6c757d;
+}
+
+/* Map Wrapper */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  display: block;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #212529;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #59ab6e;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(89, 171, 110, 0.25);
+}
+
+/* Button Styling (Zay Shop Signature Green) */
+.btn-submit {
+  background-color: #59ab6e;
+  border: 1px solid #59ab6e;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  float: right;
+}
+
+.btn-submit:hover {
+  background-color: #418554;
+  border-color: #418554;
 }
