@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom"
 
-function Hero() {
-  const data = [
+export default function Detail(){
+
+    const data = [
     {
       id: 1,
       img: "https://www.w3schools.com/w3images/sandwich.jpg",
@@ -59,43 +60,14 @@ function Hero() {
         " Lorem ipsum dolor sit ameicia ratioat enim excepturi. Ipsam quibusdam animi ratione consectetur placeat consequatur ipsa ab.",
     },
   ];
-
-  return (
-    <>
-      <div id="parent" >
-        {data.map((ele) => {
-          return (
-            <>
-            <div class="hero">
-
-         
-              <div class="image">
-                <img src={ele.img} alt="" />
-              </div>
-
-              <h3>{ele.name}</h3>
-
-              <p>{ele.paragraph}</p>
-              <Link to={`/detail/${ele.id}`}>
-              <button >
-                view detail
-              </button>
-              </Link>
-
-                 </div>
-                 
-            </>
-          );
-        })}
-      </div>
-      <div class="number-div">
-        <div class="number">1</div>
-        <div class="number">2</div>
-        <div class="number">3</div>
-        <div class="number">4</div>
-      </div>
-    </>
-  );
+    const params  = useParams()
+    console.log(params);
+    
+    return (
+        <>
+            <h1>
+            ths is detail page
+            </h1>
+        </>
+    )
 }
-
-export default Hero;

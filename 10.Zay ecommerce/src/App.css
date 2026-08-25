@@ -497,6 +497,15 @@
   font-weight: 600;
   color: #212529;
 }
+.card-parent {
+  margin: 10px 0px 0px 0px;
+  width: 100%;
+  display: flex !important;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .card {
   width: 260px;
   border: 1px solid #e0e0e0;
@@ -566,12 +575,12 @@
   align-items: center;
   justify-content: space-between;
 }
-.navbar{
+.navbar {
   z-index: 99;
 }
 /* General Font and Color Settings */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #212529;
   margin: 0;
 }

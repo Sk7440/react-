@@ -53,22 +53,24 @@ export default function Shop() {
   return (
     <>
       <ColorSchemesExample />
-      {data.map((ele) => {
-        return (
-          <>
-            <div className="card">
-              <div className="card-image-wrapper">
-                <img src={ele.src} alt={ele.name} className="card-image" />
+      <div className="card-parent">
+        {data.map((ele) => {
+          return (
+            <>
+              <div className="card">
+                <div className="card-image-wrapper">
+                  <img src={ele.src} alt={ele.name} className="card-image" />
+                </div>
+                <div className="card-content">
+                  <h4 className="card-title">{ele.name}</h4>
+                  <div className="card-rating">★ ★ ★ ☆ ☆</div>
+                  <span className="card-price">{ele.price}</span>
+                </div>
               </div>
-              <div className="card-content">
-                <h4 className="card-title">{ele.name}</h4>
-                <div className="card-rating">★ ★ ★ ☆ ☆</div>
-                <span className="card-price">{ele.price}</span>
-              </div>
-            </div>
-          </>
-        );
-      })}
+            </>
+          );
+        })}
+      </div>
       <UncontrolledExample />
       <Footer />
     </>
