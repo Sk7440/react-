@@ -45,7 +45,7 @@ export default function Pricing() {
   ];
   return (
     <>
-      <div className="bg-slate-900 py-20 px-4 text-center sm:py-28 sm:px-6">
+      <div className="bg-slate-900 py-20 px-4 text-center sm:py-28 mt-30  sm:px-6">
         <h1 className="mx-auto max-w-4xl text-3xl font-medium tracking-tight text-white sm:text-5xl">
           <span className="relative inline-block">
             <span className="relative z-10">Simple pricing</span>
@@ -68,7 +68,7 @@ export default function Pricing() {
           It doesn’t matter what size your business is, our software won’t work
           well for you.
         </p>
-        <div className="flex items-center justify-center">
+        <div className="flex mt-10 items-center justify-center">
           {data.map((ele) => {
             return (
               <>
