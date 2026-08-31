@@ -7,14 +7,14 @@ import Check from "./component/Check";
 function App() {
   return(
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Productcard/>}/>
       <Route path="/Productpage/:id" element={<Productpage/>}/>
     </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter>
 
-    <Check/>
+    {/* <Check/> */}
     </>
   )
 }
