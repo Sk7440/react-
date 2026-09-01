@@ -45,55 +45,59 @@ export default function Test() {
   ];
   return (
     <>
-    <div className="mx-auto max-w-2xl text-center py-16 px-4 sm:px-6 lg:px-8">
-  <h1 className="text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl">
-    Loved by businesses worldwide.
-  </h1>
-  <p className="mt-4 text-base text-slate-600 sm:text-lg">
-    Our software is so simple that people can’t help but fall in love with
-    it. Simplicity is easy when you just skip tons of mission-critical
-    features.
-  </p>
-</div>
-      <div className="flex items-center flex-wrap justify-center gap-5">
-      {data.map((ele) => {
-        return (
-          <>
-              <figure className=" relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10 border border-slate-100 max-w-sm">
+      <section className="py-12 sm:py-20 lg:py-28 bg-slate-50">
+        <div className="mx-auto max-w-2xl text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            Loved by businesses worldwide.
+          </h2>
+          <p className="mt-4 text-sm text-slate-600 sm:text-base lg:text-lg">
+            Our software is so simple that people can’t help but fall in love with
+            it. Simplicity is easy when you just skip tons of mission-critical
+            features.
+          </p>
+        </div>
+
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-10 sm:mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center items-stretch">
+            {data.map((ele, index) => (
+              <figure
+                key={ele.id || index}
+                className="relative flex flex-col justify-between w-full max-w-sm rounded-2xl bg-white p-6 sm:p-8 shadow-xl shadow-slate-900/10 border border-slate-100 transition-all hover:shadow-2xl hover:shadow-slate-900/15"
+              >
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 105 78"
-                  className="absolute top-6 left-6 h-16 w-auto fill-slate-100 opacity-60 pointer-events-none"
+                  className="absolute top-6 left-6 h-12 w-auto sm:h-16 fill-slate-100 opacity-60 pointer-events-none"
                 >
                   <path d="M0 78V39L39 0h26L39 39h26v39H0Zm39 0V39L78 0h26L78 39h26v39H39Z" />
                 </svg>
 
-                <blockquote className="relative">
-                  <p className="text-lg leading-relaxed text-slate-900 font-normal">
+                <blockquote className="relative z-10">
+                  <p className="text-base sm:text-lg leading-relaxed text-slate-900 font-normal">
                     {ele.paragraph}
                   </p>
                 </blockquote>
 
-                <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                <figcaption className="relative z-10 mt-6 sm:mt-8 flex items-center justify-between border-t border-slate-100 pt-6">
                   <div>
                     <div className="font-display text-base font-semibold text-slate-900">
                       {ele.name}
                     </div>
-                    <div className="mt-1 text-sm text-slate-500">
+                    <div className="mt-1 text-xs sm:text-sm text-slate-500">
                       {ele.designation}
                     </div>
                   </div>
                   <img
-                    className="h-12 w-12 rounded-full object-cover"
+                    className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover ring-2 ring-slate-100"
                     src={ele.src}
-                    alt="Sheryl Berge"
+                    alt={ele.name || "User Avatar"}
                   />
                 </figcaption>
               </figure>
-          </>
-        );
-    })}
-    </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

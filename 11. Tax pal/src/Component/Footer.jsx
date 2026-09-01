@@ -1,24 +1,24 @@
-export default function Footer(){
-    return(
-        <>
-        <footer className="bg-slate-50 border-t border-slate-100">
-  <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+export default function Footer() {
+  return (
+    <>
+     <footer className="bg-slate-50 border-t border-slate-100">
+  <div className="mx-auto max-w-7xl px-4 py-8 sm:py-12 lg:py-16 sm:px-6 lg:px-8">
     <div className="flex justify-center">
-      <div className="flex items-center gap-x-3">
+      <div className="flex items-center gap-x-2.5 sm:gap-x-3">
         <svg
           aria-hidden="true"
           viewBox="0 0 40 40"
-          className="h-10 w-10 text-blue-600 fill-current"
+          className="h-8 w-8 sm:h-10 sm:w-10 text-blue-600 fill-current"
         >
           <path d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0Zm0 36c-8.837 0-16-7.163-16-16H20v16Z" />
         </svg>
-        <span className="text-xl font-bold text-slate-900">
+        <span className="text-lg sm:text-xl font-bold text-slate-900">
           Tax<span className="text-blue-600">Pal</span>
         </span>
       </div>
     </div>
 
-    <nav className="mt-8 flex justify-center space-x-8 text-sm font-medium text-slate-700">
+    <nav className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 sm:gap-x-8 text-xs sm:text-sm font-medium text-slate-700">
       <a href="#features" className="hover:text-slate-900 transition-colors">
         Features
       </a>
@@ -30,13 +30,13 @@ export default function Footer(){
       </a>
     </nav>
 
-    <div className="mt-12 border-t border-slate-200/60" />
+    <div className="mt-8 sm:mt-12 border-t border-slate-200/60" />
 
-    <div className="mt-8 flex flex-col items-center justify-between gap-y-4 sm:flex-row">
-      <p className="text-sm text-slate-500">
+    <div className="mt-6 sm:mt-8 flex flex-col-reverse items-center justify-between gap-y-4 text-center sm:flex-row sm:text-left">
+      <p className="text-xs sm:text-sm text-slate-500">
         Copyright © 2026 TaxPal. All rights reserved.
       </p>
-      
+
       <div className="flex items-center space-x-6 text-slate-400">
         <a href="#" className="hover:text-slate-600 transition-colors" aria-label="X (Twitter)">
           <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -53,6 +53,6 @@ export default function Footer(){
     </div>
   </div>
 </footer>
-        </>
-    )
+    </>
+  )
 }

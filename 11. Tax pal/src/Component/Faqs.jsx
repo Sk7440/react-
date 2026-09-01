@@ -49,37 +49,33 @@ export default function Faqs() {
   ];
   return (
     <>
-      <div className="relative overflow-hidden bg-linear-to-r from-slate-50 via-purple-50/30 to-sky-100/50 py-20 px-6 sm:py-28 sm:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl text-left ">
-            <h1 className=" text-3xl font-medium tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              Frequently asked questions
-            </h1>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-              If you can’t find what you’re looking for, email our support team
-              and if you’re lucky someone will get back to you.
-            </p>
-          </div>
-               <div className="flex items-center justify-center flex-wrap">
-
-      {data.map((ele) => {
-          return (
-              <>
-            <div className=" p-8 max-w-lg">
-              <h3 className="text-xl font-medium tracking-tight text-slate-900">
-                {ele.questions}{" "}
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-slate-600">
-                {ele.answers}
-              </p>
-            </div>
-          </>
-        );
-    })}
+     <div className="relative overflow-hidden bg-linear-to-r from-slate-50 via-purple-50/30 to-sky-100/50 py-12 px-4 sm:py-20 sm:px-6 lg:py-28 lg:px-8">
+  <div className="mx-auto max-w-7xl">
+    <div className="max-w-2xl text-left">
+      <h1 className="text-2xl font-medium tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+        Frequently asked questions
+      </h1>
+      <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:mt-4 sm:text-base lg:text-lg">
+        If you can’t find what you’re looking for, email our support team
+        and if you’re lucky someone will get back to you.
+      </p>
     </div>
+
+    <div className="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
+      {data.map((ele, index) => (
+        <div key={ele.id || index} className="p-4 sm:p-6 lg:p-8">
+          <h3 className="text-base sm:text-lg lg:text-xl font-medium tracking-tight text-slate-900">
+            {ele.questions}
+          </h3>
+          <p className="mt-2 sm:mt-4 text-xs sm:text-sm lg:text-base leading-relaxed text-slate-600">
+            {ele.answers}
+          </p>
         </div>
-      </div>
- 
+      ))}
+    </div>
+  </div>
+</div>
+
     </>
   );
 }
