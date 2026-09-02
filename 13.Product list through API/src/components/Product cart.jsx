@@ -3,25 +3,27 @@ import { Link } from "react-router-dom"
 
 export default function Productcard() {
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
     async function Product() {
         try {
+            setLoading(true)
             const response = await fetch('https://dummyjson.com/products')
             if (!response.ok) {
                 throw new Error(`Request failed with status ${response.status}`)
             }
 
             const data = await response.json()
-            console.log(data.products);
 
             setProducts(data.products)
         }
         catch (error) {
-
+            
             (`Request failed with status ${error.message}`)
 
         }
         finally {
-
+            setLoading(false)
             ("finally message are appears here")
 
         }
@@ -34,6 +36,7 @@ export default function Productcard() {
         <>
 
             {
+                loading ? (<div className="text-white">loading...</div>):
                 products.map((ele) => {
                     return (
                         <div

@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { homeContext } from "./ContextApi";
 
 function Hero() {
   const data = [
@@ -60,8 +62,14 @@ function Hero() {
     },
   ];
 
+  const {count, setCount} = useContext(homeContext)
+
   return (
     <>
+    <div style={{margin: '200px'}}>
+
+      {count}
+    </div>
       <div id="parent" >
         {data.map((ele) => {
           return (
