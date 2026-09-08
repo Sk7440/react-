@@ -1,5 +1,5 @@
 import { homeContext } from './ContextAPi';
-import { eact } from "react"
+import { react } from "react"
 function Footer() {
   const { setCount } = useContext(homeContext)
 

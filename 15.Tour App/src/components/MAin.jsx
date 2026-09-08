@@ -120,6 +120,10 @@ const MAin = () => {
     ]
 const [ismodalOpen,setIsmodalopen]=useState(false)
     const [modal, setModal] = useState("")
+    function closeModal() {
+        setIsmodalopen(false)
+        
+    }
     return (
         <>
             <div className='flex flex-wrap mt-30'>
@@ -186,7 +190,7 @@ const [ismodalOpen,setIsmodalopen]=useState(false)
                         </>
                     )
                 })}
-                {ismodalOpen==true?<Modal form={modal}/>:""}
+                {ismodalOpen==true?<Modal form={modal} closeModal={closeModal} />:""}
             </div>
         </>
     )

@@ -21,7 +21,7 @@ const Navbar = () => {
                             type="button"
                             className="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition shadow-md"
                         >
-                            Sign In
+                            Check your Tours
                         </button>
                     </div>
                 </div>
