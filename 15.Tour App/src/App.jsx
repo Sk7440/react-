@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import MAin from './components/MAin'
 import Footer from './components/Footer'
+import Checktours from './components/Check tours'
 
 const App = () => {
   return (
@@ -10,8 +11,8 @@ const App = () => {
 
 
       <MAin />
-{}
       <Footer />
+      <Checktours/>
     </div>
   )
 }

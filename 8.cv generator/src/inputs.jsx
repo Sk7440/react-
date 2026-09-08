@@ -152,7 +152,7 @@ export default function Input() {
                 </li>
                 <li>
                   <strong>LinkedIn:</strong> {data.linkedInportfoliolink}
-                </li>
+                </li> 
               </ul>
             </div>
 

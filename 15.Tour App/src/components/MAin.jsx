@@ -12,7 +12,7 @@ const MAin = () => {
                 "duration": "7 Days / 6 Nights",
                 "groupSize": "Max 12 People",
                 "location": "Switzerland",
-                "price": "$1,850 / person"
+                "price": 1850
             },
             "overview": "Embark on an unforgettable journey through the heart of the Swiss Alps. This tour combines thrilling hikes, scenic mountain train rides, and cozy traditional stays. Perfect for nature lovers and adventurers looking to experience Europe's most iconic alpine landscapes.",
             "highlights": [
@@ -31,7 +31,7 @@ const MAin = () => {
                 "duration": "5 Days / 4 Nights",
                 "groupSize": "Max 10 People",
                 "location": "Tokyo, Japan",
-                "price": "$1,450 / person"
+                "price": 1450
             },
             "overview": "Dive headfirst into Japan's dynamic capital. Experience peaceful morning tea ceremonies at centuries-old shrines before exploring high-tech electronic districts, Michelin-starred street food, and neon-lit skyline views.",
             "highlights": [
@@ -50,7 +50,7 @@ const MAin = () => {
                 "duration": "6 Days / 5 Nights",
                 "groupSize": "Max 15 People",
                 "location": "Rome & Amalfi, Italy",
-                "price": "$1,680 / person"
+                "price": 1680
             },
             "overview": "Uncover thousands of years of Western history in Rome before unwinding along the cliffside villages of the Amalfi Coast. Perfect for culture enthusiasts, history lovers, and foodies alike.",
             "highlights": [
@@ -69,7 +69,7 @@ const MAin = () => {
                 "duration": "4 Days / 3 Nights",
                 "groupSize": "Max 8 People",
                 "location": "Paris, France",
-                "price": "$1,290 / person"
+                "price": 1290
             },
             "overview": "Indulge in the world capital of fashion, gastronomy, and art. Stroll along the Seine, explore Montmartre's hidden art studios, and marvel at masterpieces inside the Louvre with an expert art historian.",
             "highlights": [
@@ -88,7 +88,7 @@ const MAin = () => {
                 "duration": "5 Days / 4 Nights",
                 "groupSize": "Max 10 People",
                 "location": "Dubai, UAE",
-                "price": "$1,920 / person"
+                "price": 1920
             },
             "overview": "Experience the ultimate fusion of modern luxury and Arabian heritage. Rise to the top of the world's tallest building, shop in traditional spice souks, and spend a night under the stars in a luxury desert camp.",
             "highlights": [
@@ -107,7 +107,7 @@ const MAin = () => {
                 "duration": "5 Days / 4 Nights",
                 "groupSize": "Max 12 People",
                 "location": "Barcelona, Spain",
-                "price": "$1,380 / person"
+                "price": 1380
             },
             "overview": "Discover the vibrant capital of Catalonia. Marvel at the whimsical architecture of Antoni Gaudí, lose yourself in the narrow alleyways of the Gothic Quarter, and sample tapas at world-famous food markets.",
             "highlights": [
@@ -170,7 +170,7 @@ const [ismodalOpen,setIsmodalopen]=useState(false)
 
                                         <div className="flex flex-col">
                                             <span className="text-xs text-gray-500 font-medium">Price</span>
-                                            <span className="font-semibold text-emerald-600">{ele.details.price}</span>
+                                            <span className="font-semibold text-emerald-600">${ele.details.price}</span>
                                         </div>
                                     </div>
                                 </div>
