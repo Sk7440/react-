@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { context } from './Contextapi';
 
 const Modal = ({ form, closeModal }) => {
+  const { tours, setTours } = useContext(context)
   const [data, setdata] = useState({
     fullName: "",
     phoneNumber: "",
@@ -19,14 +21,20 @@ const Modal = ({ form, closeModal }) => {
   function formHandle(e) {
 
     e.preventDefault()
-    localStorage.setItem("data", JSON.stringify(data))
-    localStorage.setItem("total1",JSON.stringify(total))
-    localStorage.setItem("formTitle",JSON.stringify(form.title))
+    setTours((prev) => [...prev, data])
+
+
+
+
+    localStorage.setItem("total1", JSON.stringify(total))
+    localStorage.setItem("formTitle", JSON.stringify(form.title))
     alert("Form submitted ")
     closeModal()
 
 
   }
+
+
   const [total, setTotal] = useState(Number(form.details.price))
 
   function cost(e) {
@@ -37,10 +45,17 @@ const Modal = ({ form, closeModal }) => {
   return (
 
     <>
-      <section className="fixed inset-0 top-10 bg-black/50 overflow-y-auto p-4 z-50">
+      <section onClick={() => {
+        closeModal()
+      }} className="fixed inset-0 top-10 bg-black/50 overflow-y-auto p-4 z-50">
 
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-gray-100 my-10">
+          <button onClick={() => {
+            closeModal()
+          }}>
+            <i className="fa-solid fa-arrow-left text-sm"></i>
 
+          </button>
           <div className="mb-8 text-center sm:text-left">
             <h2 className="text-2xl font-bold text-gray-900">Book Your Tour</h2>
             <p className="text-gray-500 text-sm mt-1">
@@ -168,7 +183,7 @@ const Modal = ({ form, closeModal }) => {
                 </span>
                 <input type="number"
                   name='numberofPersons'
-                  onChange={(e) => {cost(e)}}
+                  onChange={(e) => { cost(e) }}
                   className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 text-sm focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all duration-200 outline-none"
                 />
 
