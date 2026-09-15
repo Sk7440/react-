@@ -25,7 +25,6 @@ const Modal = ({ form, closeModal }) => {
 
 
 
-
     localStorage.setItem("total1", JSON.stringify(total))
     localStorage.setItem("formTitle", JSON.stringify(form.title))
     alert("Form submitted ")
