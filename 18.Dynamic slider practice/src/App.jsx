@@ -38,7 +38,6 @@ function App() {
               position = 'prevSlide'
             }
 
-            // Add "return" here:
             return (
               <div
                 key={ele.id}
