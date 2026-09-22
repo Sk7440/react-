@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { context } from './Contextapi'
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { ImCross } from "react-icons/im";
 
 function Sidebar() {
     const { sideBar, setSidebar } = useContext(context)
     const { cart, setCart } = useContext(context)
-    console.log(cart);
 
     let position;
     {
@@ -21,6 +21,35 @@ function Sidebar() {
 
 
     }
+    function del(id) {
+        let newArray = cart.filter((ele) => {
+            return ele.id != id
+        })
+        setCart(newArray)
+
+
+    }
+    function inc(id) {
+        setCart(prevCart =>
+            prevCart.map((ele) => {
+                return (
+
+                    ele.id === id ? { ...ele, qty: ele.qty + 1 } : ele
+                )
+
+            })
+
+        );
+    }
+    function dec(id) {
+        setCart(prevCart =>
+            prevCart.map((ele) => {
+                return (
+                    ele.qty > 1 ? ele.id === id ? { ...ele, qty: ele.qty - 1 } : ele : { ...ele, qty: ele.qty = 1 }
+                )
+            })
+        );
+    }
 
 
 
@@ -34,7 +63,7 @@ function Sidebar() {
                 <IoMdArrowRoundBack className="text-lg" />
             </button>
 
-            <div className="flex-1 overflow-y-auto space-y-4 pr-1">
+            <div className="flex-1 justify-around items-center overflow-y-auto space-y-4 pr-1">
                 {
                     cart.map((ele, idx) => {
                         return (
@@ -53,7 +82,7 @@ function Sidebar() {
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 mt-3 rounded-lg border border-neutral-800 bg-neutral-900/80 px-2 py-1">
-                                        <button onClick={() => { }} className="h-5 w-5 flex items-center justify-center rounded text-neutral-400 hover:text-white hover:bg-neutral-800 transition active:scale-90 text-sm font-bold">
+                                        <button onClick={() => { inc(ele.id) }} className="h-5 w-5 flex items-center justify-center rounded text-neutral-400 hover:text-white hover:bg-neutral-800 transition active:scale-90 text-sm font-bold">
                                             +
                                         </button>
 
@@ -61,7 +90,7 @@ function Sidebar() {
                                             {ele.qty}
                                         </p>
 
-                                        <button onClick={() => { }} className="h-5 w-5 flex items-center justify-center rounded text-neutral-400 hover:text-white hover:bg-neutral-800 transition active:scale-90 text-sm font-bold">
+                                        <button onClick={() => { dec(ele.id) }} className="h-5 w-5 flex items-center justify-center rounded text-neutral-400 hover:text-white hover:bg-neutral-800 transition active:scale-90 text-sm font-bold">
                                             -
                                         </button>
                                     </div>
@@ -73,12 +102,26 @@ function Sidebar() {
                                         ${(ele.price * ele.qty).toFixed(2)}
                                     </span>
                                 </div>
+                                <button
+                                    onClick={() => { del(ele.id) }}
+                                    className="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900 text-neutral-400 hover:text-red-600 hover:border-neutral-700 transition active:scale-95 mb-6"
+                                >
+                                    <ImCross className="text-lg" />
+                                </button>
                             </div>
+
                         )
                     })
                 }
+
             </div>
-            
+            <button
+
+                className="h-10 w-full rounded-lg border border-neutral-800 bg-white text-black"
+            >
+                CheckOut
+            </button>
+
         </div>
     )
 }
