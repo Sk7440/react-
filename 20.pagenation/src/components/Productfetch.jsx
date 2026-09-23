@@ -12,7 +12,6 @@ function Productfetch() {
     const [page, setPage] = useState(0)
     let prodPerpage = 10
     const [totalPages, setTotalPages] = useState(null)
-    console.log(totalPages);
 
     function paginate(page) {
         let startIndex = page * prodPerpage
@@ -63,9 +62,29 @@ function Productfetch() {
 
     }, [allProducts, page])
 
+    function dec() {
+        if(page>0){
+
+            setPage(page - 1)
+        }
+        else{
+            alert("baaz aa oyee")
+        }
+    }
+    function inc() {
+        if(page<2){
+            
+            
+            setPage(page + 1)
+        }
+        else{
+            alert('khatm gya bye bye')
+        }
+
+    }
     return (
-        <>
-            <div className='bg-black flex w-full h-full flex-wrap justify-center  items-center gap-3 pt-3'>
+        <div className='bg-black w-full h-full'>
+            <div className=' flex w-full h-full flex-wrap justify-center  items-center gap-3 pt-3'>
                 {
                     error ? (<Card />) : loading ? (<Loader />) : (liveProducts.map((ele) => {
                         return (
@@ -157,20 +176,27 @@ function Productfetch() {
 
 
             </div>
-            <div className='bg-black flex justify-center items-center gap-6 pt-5'>
-                {Array.from({ length: totalPages }).map((ele, idx) => {
-                    return (
-                        <button
-                            key={idx}
-                            className="min-w-9 h-9 px-3 text-sm font-medium rounded-lg border transition-all duration-150 flex items-center justify-center bg-white"
+            <div className='bg-black text-white flex justify-around items-center'>
+                <button className='bg-white p-4 rounded-2xl text-gray-700 border-gray-300 hover:bg-gray-50' onClick={() => { dec() }}>Previous</button>
+                <div className='bg-black flex justify-center items-center gap-6 pt-5'>
+                    {Array.from({ length: totalPages }).map((ele, idx) => {
+                        return (
+                            <button
+                                key={idx}
+                                className={`min-w-9 h-9 px-3 text-sm font-medium rounded-lg border transition-all duration-150 flex items-center justify-center ${page == idx
+                                    ? "bg-blue-600 text-white border-blue-600"
+                                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+                                    }`}
+                            >
+                                {idx+1}
+                            </button>
+                        );
+                    })}
+                </div>
+                <button className='bg-white p-4 rounded-2xl text-gray-700 border-gray-300 hover:bg-gray-50' onClick={() => { inc() }}>Next</button>
 
-                        >
-                            {idx}
-                        </button>
-                    );
-                })}
             </div>
-        </>
+        </div>
     )
 }
 
