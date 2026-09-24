@@ -44,9 +44,7 @@ const Modal = ({ form, closeModal }) => {
   return (
 
     <>
-      <section onClick={() => {
-        closeModal()
-      }} className="fixed inset-0 top-10 bg-black/50 overflow-y-auto p-4 z-50">
+      <section className="fixed inset-0 top-10 bg-black/50 overflow-y-auto p-4 z-50">
 
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-gray-100 my-10">
           <button onClick={() => {
