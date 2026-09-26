@@ -1,9 +1,10 @@
 import React from 'react'
+import Quizquestions from './components/Quizquestions'
 
 function App() {
   return (
-    <div>App</div>
-  )
+    
+    <Quizquestions />)
 }
 
 export default App
